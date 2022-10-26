@@ -1,0 +1,14 @@
+# Local Node
+.idea/
+node_modules
+.log
+coverage
+*~
+*.java
+
+
+# ApprovalTests
+*.received.*
+
+# Mac
+.DS_Store
