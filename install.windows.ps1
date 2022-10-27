@@ -4,8 +4,8 @@
 # This script is intended to setup a dev machine from scratch. Very useful for setting up a EC2 instance for mobbing.
 #
 
-
- iwr -useb https://raw.githubusercontent.com/JayBazuzi/machine-setup/main/javascript-webstorm.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/JayBazuzi/machine-setup/main/windows.ps1 | iex
+iwr -useb https://raw.githubusercontent.com/JayBazuzi/machine-setup/main/javascript-webstorm.ps1 | iex
 
 
  
