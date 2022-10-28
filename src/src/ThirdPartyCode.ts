@@ -7,4 +7,7 @@ export class ThirdPartyCode{
     static getSecurityKey():number {
         return 42;
     }
+    static getSecurityCode():string {
+        return "42";
+    }
 }
