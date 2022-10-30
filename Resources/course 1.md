@@ -38,11 +38,12 @@ We are going to start with code that is simpler to test, so you can figure out w
 **Scenario:** In this scenario, we are going to look at getting high test coverage over existing,
 working code that is non-functional (all effects are side effects) but still deterministic.
 
-* [ ] Run first test
-  * Confirmation: See failure message
+* [ ] Run the test
+  * Confirmation: See the tests pass
+  * **Question:** what does this test actually test?
 * [ ] Add Markers to `initialiseServices`
   * Confirmation: See logging for entrance and exit
-  * **Hint:** Wrap contents with `SimpleLogger.useMarkers`
+  * **Hint:** Wrap contents with `SimpleLogger.useMarkers`, you can refer to the cheat sheet
 * [ ] Add variable logging for `key`
   * Confirmation: See log message
 * [ ] Modify logging to show type
@@ -63,5 +64,5 @@ working code that is non-functional (all effects are side effects) but still det
 
 ## Homework
 
-* [ ] Print out the [homework sheet](https://github.com/LearnWithLlew/TestingLegacyCodeCourse.slides/raw/master/Homework%20Printouts%20-%20Week%201.pdf) and keep it by your desk, to increase your awareness throughout the week.
+* [ ] Print out the [homework sheet](https://github.com/LearnWithLlew/TestingLegacyCodeCourse.ts/raw/main/Resources/Slides/Homework_1.pdf) and keep it by your desk, to increase your awareness throughout the week.
 
