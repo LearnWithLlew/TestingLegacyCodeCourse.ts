@@ -33,6 +33,33 @@ We are going to start with code that is simpler to test, so you can figure out w
 * [ ] Explanations and Retrospective
 
 ## Logging Behavior
+**In File:** `test/Services.test.ts`
+
+**Scenario:** In this scenario, we are going to look at getting high test coverage over existing,
+working code that is non-functional (all effects are side effects) but still deterministic.
+
+* [ ] Run first test
+  * Confirmation: See failure message
+* [ ] Add Markers to `initialiseServices`
+  * Confirmation: See logging for entrance and exit
+  * **Hint:** Wrap contents with `SimpleLogger.useMarkers`
+* [ ] Add variable logging for `key`
+  * Confirmation: See log message
+* [ ] Modify logging to show type
+  * Confirmation: See type of `key`
+* [ ] Capture Logging for tests
+  * Confirmation: Test pass with logged output
+  * **Hint:** use `verifySimpleLogger`
+* [ ] Add event logging for 1st service call
+  * Confirmation: Test contain event start
+* [ ] add logging for return status
+  * Confirmation: Test contain 200
+* [ ] add rest of the logging
+  * Confirmation: Test are complete
+* [ ] add markers to `restCall`
+  * Confirmation: Many more entrances and exits
+* [ ] add input and exit information to `restCall`
+  * Confirmation: => Markers (include: inputs)  & <= Markers: includeReturnCodes
 
 ## Homework
 
