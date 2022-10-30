@@ -12,9 +12,11 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "approvals": "^5.1.0"
+  },
   "devDependencies": {
     "@types/node": "^15.12.2",
-    "approvals": "^5.1.0",
     "jest": "^29.1.2",
     "prettier": "2.3.1",
     "ts-jest": "^29.0.3",
