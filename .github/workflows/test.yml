@@ -15,7 +15,8 @@ jobs:
         with:
           node-version: 16
       - run: |
-          ./run_tests.sh
+          pwd
+          # ./run_tests.sh
 
   auto-merge:
     needs: build
