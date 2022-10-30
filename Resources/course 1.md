@@ -11,7 +11,8 @@
 **In File:** `test/TrigMath.test.ts`
 
 **Scenario:** In this scenario, we are going to look at getting high test coverage over existing, working code.  
-We are going to start with code that is simpler to test, so you can figure out what it does by running it, and then preserving its behavior with tests.
+We are going to start with code that is simpler to test, so you can figure out what it does by running it,
+and then preserving its behavior with tests.
 
 * [ ] Run first test
   * Confirmation: See failure message
@@ -43,7 +44,7 @@ working code that is non-functional (all effects are side effects) but still det
   * **Question:** what does this test actually test?
 * [ ] Add Markers to `initialiseServices`
   * Confirmation: See logging for entrance and exit
-  * **Hint:** Wrap contents with `SimpleLogger.useMarkers`, you can refer to the cheat sheet
+  * **Hint:** Wrap contents with `SimpleLogger.useMarkers`
 * [ ] Add variable logging for `key`
   * Confirmation: See log message
 * [ ] Modify logging to show type
@@ -59,10 +60,15 @@ working code that is non-functional (all effects are side effects) but still det
   * Confirmation: Test are complete
 * [ ] add markers to `restCall`
   * Confirmation: Many more entrances and exits
-* [ ] add input and exit information to `restCall`
-  * Confirmation: => Markers (include: inputs)  & <= Markers: includeReturnCodes
+* [ ] add input information to `restCall`
+  * Confirmation: => Markers (include: inputs) 
+* [ ] add exit information to `restCall`
+  * Confirmation: <= Markers: includeReturnCodes
+* [ ] Clean up unnecessary logs
+  * Confirmation: much less clutter in the logs
 
 ## Homework
 
-* [ ] Print out the [homework sheet](https://github.com/LearnWithLlew/TestingLegacyCodeCourse.ts/raw/main/Resources/Slides/Homework_1.pdf) and keep it by your desk, to increase your awareness throughout the week.
+* [ ] Print out the [homework sheet](https://github.com/LearnWithLlew/TestingLegacyCodeCourse.ts/raw/main/Resources/Slides/Homework_1.pdf) 
+      and keep it by your desk, to increase your awareness throughout the week.
 
