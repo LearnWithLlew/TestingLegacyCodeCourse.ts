@@ -1,6 +1,7 @@
 export class TrigMath {
     // Constants
-    public static readonly PI: number = Math.PI;
+    public static readonly IMPROVEMENT_2 = false;
+    public static readonly PI: number = 3.1415;
     public static readonly SQUARED_PI: number = this.PI * this.PI;
     public static readonly HALF_PI: number = this.PI / 2;
     public static readonly QUARTER_PI: number = this.HALF_PI / 2;
@@ -137,7 +138,7 @@ export class TrigMath {
     }
 
     private static sinRaw(idx: number): number {
-        return this.SIN_TABLE[idx & this.SIN_MASK];
+        return this.SIN_TABLE[idx & this.SIN_MASK + this.getOffset()];
     }
 
     private static cosRaw(idx: number): number {
@@ -151,6 +152,9 @@ export class TrigMath {
         return value * arg;
     }
 
+    private static getOffset():number{
+         return this.IMPROVEMENT_2 ? 1:0;
+    }
     private static msatan(arg: number): number {
         if (arg < this.sq2m1) {
             return this.mxatan(arg);
