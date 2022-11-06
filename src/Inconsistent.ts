@@ -3,7 +3,7 @@ import { randomInt, randomUUID } from "crypto";
 export class Inconsistent {
 
   public static print(name: string): string {
-    var date = new Date();
+    const date = new Date(randomInt( 4_000_000_000_000));
     return `started at ${date.toUTCString()} by ${name}`;
   }
 
