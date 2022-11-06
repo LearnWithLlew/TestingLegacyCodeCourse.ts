@@ -1,6 +1,7 @@
 # Course Section 2
 
 ## Testing with Approvals
+
 ### Basic ApprovalTests
 
 **Scenario:** In this scenario, we are going to redo last week's exercise, introducing Approval Tests, to learn the basics of approvals.
@@ -24,6 +25,7 @@
       * Confirmation: You can tell which method was called  with which value for each line 
 * [ ] Test all methods with input value 3.14
     * Confirmation: Another large `.approved.txt` file
+    * 
 ### Verify List of Inputs
 
 **Scenario:** In this scenario, we are going to redo the exercise again, to explore more advanced uses of Approval Tests, to handle **large numbers of inputs**.
@@ -60,9 +62,7 @@
 
 ## Improving non-functional code
 
-### Functional Harness
-
-#### Date and Time
+### Scrubbing
 
 > **Scenario:** In this scenario, we are learning how to use ApprovalTests to deal with methods that produce **inconsistent results**.   
 > The most common variants of inconsistent results are because of dates, Guids and Random Numbers. 
@@ -73,65 +73,36 @@
   * [ ] Scrub your results
     * Hint: Use `Options` & `Scrubbers`
     * Confirmation: The test pass when run multiple times
-* [ ] Scrub `Inconsistent.print()` for time
-    * [ ] Poke-test print()
-      * Confirmation: Failing test because of date and time
-    * [ ] Scrub inconsistent results
-      * Hint: `Scrubbers.templates` 
+* [ ] Dates
+  * [ ] Poke-test `Inconsistent.print()` 
+    * Confirmation: Failing tests
+  * [ ] Scrub inconsistent results
+    * Hint: `Scrubbers.templates` 
+    * Confirmation: Passing test with scrubbed date
+*  [ ] Regex
+    * [ ] Poke-test`Inconsistent.getWordOfTheDay()` 
+    * Confirmation: Failing tests
+  * [ ] Scrub inconsistent results
+      * Hint: `Scrubbers.templates`
       * Confirmation: Passing test with scrubbed date
-* [ ] Scrub `Inconsistent.print()` for time
-    * [ ] Poke-test print()
-        * Confirmation: Failing test because of date and time
-    * [ ] Scrub inconsistent results
-        * Hint: `Scrubbers.templates`
-        * Confirmation: Passing test with scrubbed date
-* [ ] Peel Inconsistent::print() to pass in time
-    * Hint: `ApprovalTests::DateUtils::createUtcDateTime`
 * [ ] **Retro**
 
-#### Random
 
-> **Scenario:** In this scenario, we are going to look at inconsistency that is embedded deeper in the code. We are going to look at a range of options to make the code consistent.  
-> Because randomness is often a problem for testing, that will be our example.
->
-> First we are going to make quick hacks to get getId() under passing tests. Then we will change getId() to make it possible to test without hacks
+### Imperative Shell / Functional Core 
 
-**In File:** `exercises/exercise2/tests/InconsistentTests.cpp`
-* [ ] Extract Testable function that takes a number
-    * Confirmation: you can reason out what the result will be before running it.
-* [ ] **Retro**
+> **Scenario:** We are going to learn how to split up code into 2 parts to make it easy to test. This will all be a version of a `Peel`
 
-#### Side Effects
+**In File:** `test/NonFunctional.test.ts`
 
-> **Scenario:** In this scenario, we are going to look at code that only produces side-effects, that is, it does not return its results.  
-> Unlike last time, where we only captured the results with hacks, this time we are going to change the code so hacks are not needed.  
-> A common scenario is writing to output. so that will be our example.
-
-**In File:** `exercises/exercise2/tests/SideEffectsTests.cpp`
-
-* [ ] Poke-test SideEffects::printName1()
-* [ ] Peel SideEffects::printName1() to return a string
-* [ ] Peel/slice SideEffects::printName2() to take a stream
-
-### Missing Inputs
-
-> **Scenario:** This scenario is about splitting up code, so that hard-to-set-up scenarios become easily testable.
-
-**In File:** `exercises/exercise2/tests/MissingInputsTests.cpp`
-
-* [ ] Poke-test MissingInputs::getCategory()
-* [ ] Get it to 100% coverage
-* [ ] Peel to pass in missing inputs
-
-### Reduce to functional
-
-> **Scenario:** A common problem is how to separate a loop to be functional. We are going to practice doing this.
-
-**In File:** `exercises/exercise2/tests/LoopTests.cpp`
-
+* [ ] Separate an input
+  * [ ] Split and test `getCategory`
+* [ ] Separate a side effect
+* [ ] Split and test `printName`
 * [ ] Separate a loop
-    * Have a loop that squares a number and saves it to a file
-    * Turn it into two loops - one does the calculation, the other saves it to the file
+  * [ ] Split and test `loop`
+      * You have a loop that squares a number and saves it to a file
+      * Turn it into two loops - one does the calculation, the other saves it to the file
+      * Test the calculation
 
 ### Wrapping Up
 * [ ] **Retro**
