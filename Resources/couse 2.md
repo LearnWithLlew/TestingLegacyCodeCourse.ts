@@ -17,8 +17,11 @@
     * Use an output string
     * Hint: for `Atan2` , use 0.4 as the second parameter
     * Confirmation: A large `.approved.txt` file with 13 values
-* [ ] Better to-strings, to show function names
-    * Confirmation: You can tell which method was called, for each line in `.approved.txt`
+* [ ] Better to-strings
+    * [ ]show function names
+      * Confirmation: You can tell which method was called for each line
+    * [ ]show parameter values
+      * Confirmation: You can tell which method was called  with which value for each line 
 * [ ] Test all methods with input value 3.14
     * Confirmation: Another large `.approved.txt` file
 ### Verify List of Inputs
@@ -26,10 +29,10 @@
 **Scenario:** In this scenario, we are going to redo the exercise again, to explore more advanced uses of Approval Tests, to handle **large numbers of inputs**.
 
 * [ ] Make a single test that tests everything for 1.0 and 3.14
-    * Hint: read [the docs](https://approvaltestscpp.readthedocs.io/en/latest/)
     * Confirmation: You should have a call to  `verifyAll()`
 * [ ] Add values `-0.1, 0, 0.2, 0.8` to your tests for everything
     * Confirmation: Everything except Atan2 should be covered
+
 ### Seeing Failures
 
 **Scenario:** In this scenario, we are going to look at how Approval Tests can help us, when tests fail, to identify the differences between **changes that we want**, and **changes we don't.**
@@ -62,20 +65,26 @@
 #### Date and Time
 
 > **Scenario:** In this scenario, we are learning how to use ApprovalTests to deal with methods that produce **inconsistent results**.   
-> Because the most common variant of this deals with dates and times, that will be our example.
-
-**In File:** `exercises/exercise2/tests/InconsistentTests.cpp`
-
-* [ ] Scrub Inconsistent::print() for time
-    * [ ] Poke-test print() in `Inconsistent.h`
+> The most common variants of inconsistent results are because of dates, Guids and Random Numbers. 
+**In File:** `test/Inconsistent.test.ts`
+* [ ] Guids
+  * [ ] Poke-test `Inconsistent.getFamily()` in `Inconsistent`
+    * Confirmation: Failing test because the guids
+  * [ ] Scrub your results
+    * Hint: Use `Options` & `Scrubbers`
+    * Confirmation: The test pass when run multiple times
+* [ ] Scrub `Inconsistent.print()` for time
+    * [ ] Poke-test print()
+      * Confirmation: Failing test because of date and time
+    * [ ] Scrub inconsistent results
+      * Hint: `Scrubbers.templates` 
+      * Confirmation: Passing test with scrubbed date
+* [ ] Scrub `Inconsistent.print()` for time
+    * [ ] Poke-test print()
         * Confirmation: Failing test because of date and time
     * [ ] Scrub inconsistent results
-    * Hint: `Approvals::verify("text", Options(Scrubbers::createRegexScrubber(R"()", "[replacement]")));`
-    * Hint: `\d` matches a digit
-    * Hint: `[a-z]` matches lower-case letter
-    * Hint: `\d{3}` matches 3 digits
-    * Confirmation: Passing test with scrubbed date
-
+        * Hint: `Scrubbers.templates`
+        * Confirmation: Passing test with scrubbed date
 * [ ] Peel Inconsistent::print() to pass in time
     * Hint: `ApprovalTests::DateUtils::createUtcDateTime`
 * [ ] **Retro**
@@ -88,14 +97,6 @@
 > First we are going to make quick hacks to get getId() under passing tests. Then we will change getId() to make it possible to test without hacks
 
 **In File:** `exercises/exercise2/tests/InconsistentTests.cpp`
-
-* [ ] Poke-test getId() in Inconsistent.h
-
-* [ ] Make consistent seed via #ifdef
-    * Confirmation: test work when run 2 times
-
-* [ ] Extract testable function that takes a seed
-    * Confirmation: working test without the test seam
 * [ ] Extract Testable function that takes a number
     * Confirmation: you can reason out what the result will be before running it.
 * [ ] **Retro**

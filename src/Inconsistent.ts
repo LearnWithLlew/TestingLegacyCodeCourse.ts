@@ -3,8 +3,8 @@ import { randomInt, randomUUID } from "crypto";
 export class Inconsistent {
 
   public static print(name: string): string {
-    var date: number = Date.now();
-    return `started at ${date} by ${name}`;
+    var date = new Date();
+    return `started at ${date.toUTCString()} by ${name}`;
   }
 
   public static getFamily() {
@@ -20,7 +20,57 @@ export class Inconsistent {
     };
   }
 
+  public static getWordOfTheDay(){
+    const words = dictionary();
+    const word = words[randomInt(words.length)];
+    return `Hello Typescripter,\nTodays word is **${word}**.\n  Happy Testing!\n  `
+  }
+
+
   public static getId(): number {
     return randomInt(1, 20);
   }
+}
+function dictionary(): string[] {
+  return [
+
+    "abandonable",
+    "abandoned",
+    "abandonedly",
+    "abandonee",
+    "abandone",
+    "dresser",
+    "dressership",
+    "dressily",
+    "dressiness",
+    "dressing",
+    "dressline",
+    "dressmaker",
+    "notencephalocele",
+    "notencephalus",
+    "noter",
+    "notewise",
+    "noteworthily",
+    "separately",
+    "separateness",
+    "separates",
+    "separatical",
+    "separating",
+    "cork",
+    "corkage",
+    "corkboard",
+    "corke",
+    "corked",
+    "corker",
+    "corkiness",
+    "corking",
+    "corkish",
+    "corkite",
+    "corkmaker",
+    "corkmaking",
+    "corkscrew",
+    "corkscrewy",
+    "corkwing",
+    "corkwood"
+  ];
 }
