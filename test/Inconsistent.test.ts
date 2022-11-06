@@ -7,7 +7,5 @@ import { Options } from "approvals/lib/Core/Options";
 
 describe("Inconsistent", () => {
    test("print", () => {
-     const s = Scrubbers.createReqexScrubber(/\*\*[a-zA-Z]+\*\*/g, `**<word_of_the_day>**`)
-     verify(Inconsistent.getWordOfTheDay(), new Options().withScrubber(s));
    });
 });

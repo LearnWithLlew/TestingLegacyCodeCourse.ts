@@ -40,7 +40,9 @@ introducing Approval Tests, to learn the basics of approvals.
     * 
 ### Verify List of Inputs
 
-**Scenario:** In this scenario, we are going to redo the exercise again, to explore more advanced uses of Approval Tests, to handle **large numbers of inputs**.
+**Scenario:** In this scenario, we are going to redo the exercise again,
+to explore more advanced uses of Approval Tests,
+to handle **large numbers of inputs**.
 
 * [ ] Make a single test that tests everything for 1.0 and 3.14
     * Confirmation: You should have a call to  `verifyAll()`
@@ -49,24 +51,14 @@ introducing Approval Tests, to learn the basics of approvals.
 
 ### Seeing Failures
 
-**Scenario:** In this scenario, we are going to look at how Approval Tests can help us, when tests fail, to identify the differences between **changes that we want**, and **changes we don't.**
+**Scenario:** In this scenario, we are going to look at how Approval Tests can help us,
+when tests fail, to identify the differences between **changes that we want**, and **changes we don't.**
 
-* [ ] Improve the precision of `PI`
-    * Hint: Use `M_PI`
+* [ ] Improve the precision of `TrigMath.PI`
+    * Hint: Use `Math.PI`
     * Confirmation: Later digits in the results are different; tests are passing
 * [ ] Turn on `IMPROVEMENT_2`
     * Confirmation: You can tell us what this did; You know if you should fix the tests or undo the change
-* [ ] Better to-strings, to show function names and input values
-    * Confirmation: You can tell which method was called, with which value, for each line in `.approved.txt`
-
-### Combinations of Inputs
-
-**Scenario:** In this scenario, we are going to redo the exercise again, to explore **incredibly large numbers of inputs**.
-
-* [ ] Combination approvals - Test `Sin()` for the inputs `{1.0, 3.14, -0.1, 0, 0.2, 0.8}`
-    * Confirmation: You should have a `verifyAllCombinations()` call
-* [ ] Combination approvals - Test `Atan2` for multiple inputs
-    * Confirmation: You have tested `Atan2` with a range of values for both arguments
 
 ### Finishing Off
 * [ ] Explanations and Retrospective
