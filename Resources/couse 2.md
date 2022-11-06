@@ -17,7 +17,7 @@ introducing Approval Tests, to learn the basics of approvals.
   `verify(runEverything(1.0))`
     * Use an output string
     * Hint: for `Atan2` , use 0.4 as the second parameter
-      * Confirmation: A large `.approved.txt` file with 13 values:
+      * Confirmation: A large `.approved.txt` file with 12 values:
         acos
         acot
         acsc
