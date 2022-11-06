@@ -13,11 +13,23 @@ introducing Approval Tests, to learn the basics of approvals.
     * Confirmation:
         1. a diff tool opened
         2. tests are passing
-* [ ] Create a function that tests all 13 methods in TrigMath for one value, 1.0 -    
+* [ ] Create a function that tests all 12 methods in TrigMath for one value, 1.0 -    
   `verify(runEverything(1.0))`
     * Use an output string
     * Hint: for `Atan2` , use 0.4 as the second parameter
-    * Confirmation: A large `.approved.txt` file with 13 values
+      * Confirmation: A large `.approved.txt` file with 13 values:
+        acos
+        acot
+        acsc
+        asin
+        asec
+        atan
+        atan2
+        cos
+        csc
+        sec
+        sin
+        tan
 * [ ] Better to-strings
     * [ ]show function names
       * Confirmation: You can tell which method was called for each line
