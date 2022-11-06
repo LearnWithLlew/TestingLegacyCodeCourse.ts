@@ -4,15 +4,15 @@
 
 ### Basic ApprovalTests
 
-**Scenario:** In this scenario, we are going to redo last week's exercise, introducing Approval Tests, to learn the basics of approvals.
+**Scenario:** In this scenario, we are going to redo last week's exercise,
+introducing Approval Tests, to learn the basics of approvals.
 
-**In File:** `test/TrigMath.test.ts`
+**In File:** `test/TrigMathApprovals.test.ts`
 
-* [ ] Demo: Basic approval of Sin() and Cos()
+* [ ] Demo: Basic approval of Cos()
     * Confirmation:
-        * a diff tool opened
-        * 2 `.approved.txt` files in source control
-        * tests are passing
+        1. a diff tool opened
+        2. tests are passing
 * [ ] Create a function that tests all 13 methods in TrigMath for one value, 1.0 -    
   `verify(runEverything(1.0))`
     * Use an output string
