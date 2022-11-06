@@ -6,6 +6,6 @@ import { Options } from "approvals/lib/Core/Options";
 
 
 describe("Inconsistent", () => {
-   test("print", () => {
+   test("getFamily", () => {
    });
 });
