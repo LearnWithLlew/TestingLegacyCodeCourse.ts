@@ -1,3 +1,5 @@
+import * as fs from "fs";
+
 export class NonFunctional {
 
   private count: number = 0;
@@ -14,12 +16,13 @@ export class NonFunctional {
     process.stdout.write(`Hello ${name}. Welcome to the commandline\n`);
   }
 
-  public static loop(count: number):void{
-    try (FileWriter f = new FileWriter(Files.createTempFile("", ".txt").toFile())) {
-      for (let i = 1; i < count; i++) {
+  public static loop(count: number): void {
+    fs.open("/tmp/message.txt", "a", (err, fd) => {
+      for (let i = 1; i <= count; i++) {
         const squared = i * i;
-        f.append(`${i} -> ${squared}\n");
+        const text = `${i} -> ${squared}\n`;
+        fs.appendFile(fd, text, "utf8", (err) => fs.close(fd));
       }
-    }
+    });
   }
 }
