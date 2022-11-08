@@ -26,6 +26,7 @@ introducing Approval Tests, to learn the basics of approvals.
         atan
         atan2
         cos
+        ctan
         csc
         sec
         sin
@@ -100,13 +101,16 @@ when tests fail, to identify the differences between **changes that we want**, a
 
 * [ ] Separate an input
   * [ ] Split and test `getCategory`
+  * Confirmation: You have tested 100% of the method
 * [ ] Separate a side effect
-* [ ] Split and test `printName`
+  * [ ] Split and test `printName`
+  * Confirmation: you a tested method that return the data
 * [ ] Separate a loop
   * [ ] Split and test `loop`
       * You have a loop that squares a number and saves it to a file
       * Turn it into two loops - one does the calculation, the other saves it to the file
       * Test the calculation
+  * Confirmation: you can test the elements that are being printed to a file
 
 ### Wrapping Up
 * [ ] **Retro**
