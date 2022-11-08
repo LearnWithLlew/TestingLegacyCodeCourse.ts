@@ -40,7 +40,7 @@ and then preserving its behavior with tests.
 working code that is non-functional (all effects are side effects) but still deterministic.
 
 * [ ] Run the test
-  * Confirmation: See the tests pass
+  * Confirmation: See the test pass
   * **Question:** what does this test actually test?
 * [ ] Add Markers to `initialiseServices`
   * Confirmation: See logging for entrance and exit
