@@ -26,7 +26,7 @@ introducing Approval Tests, to learn the basics of approvals.
         atan
         atan2
         cos
-        ctan
+        cot
         csc
         sec
         sin
@@ -89,7 +89,7 @@ when tests fail, to identify the differences between **changes that we want**, a
     * Confirmation: Failing tests
   * [ ] Scrub inconsistent results
       * Hint: `Scrubbers.templates`
-      * Confirmation: Passing test with scrubbed date
+      * Confirmation: Passing test with **<word_of_the_day>**
 * [ ] **Retro**
 
 
